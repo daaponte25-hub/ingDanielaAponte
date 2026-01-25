@@ -1,0 +1,130 @@
+section#tecnologia {
+  position: relative;
+  overflow: visible;
+  color: #fff;
+  font-family: inherit;
+  padding: 56px 6%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #7159c1 0%, #6a27ff 100%);
+}
+
+/*section#tecnologia::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  right: -40px;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #7159c1 0%, #6a27ff 100%);
+  pointer-events: none;
+}*/
+
+section#tecnologia .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+section#tecnologia .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+  align-items: stretch;
+}
+
+section#tecnologia .card {
+  background: #ffffff;
+  color: #111;
+  padding: 35px 25px;
+  position: relative;
+  min-height: 240px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 8px;
+  box-sizing: border-box;
+  
+  /* Animaciones */
+  opacity: 1;
+  transform: translateY(24px) scale(.995);
+  transition: transform 720ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms, opacity 360ms;
+  will-change: transform, opacity;
+}
+
+section#tecnologia .card.is-visible {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+  opacity: 1;
+}
+
+/* Ajuste clave para tu HTML: title-row ahora apila icono y texto */
+section#tecnologia .title-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+/* Tamaño de iconos según tu referencia visual */
+section#tecnologia .card-icon {
+  width: 100px; 
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+section#tecnologia .card-title {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(20px, 2.5vw, 26px); 
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 700;
+  color: #333;
+}
+
+section#tecnologia .card .card-body {
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+  margin-top: 10px;
+  transform: translateY(10px);
+  opacity: 0.98;
+  transition: transform 560ms cubic-bezier(.2,.9,.2,1), opacity 560ms;
+}
+
+section#tecnologia .card.is-visible .card-body {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- RESPONSIVE OPTIMIZADO --- */
+
+@media only screen and (max-width: 1100px) {
+  section#tecnologia .card-icon { width: 85px; height: 85px; }
+  section#tecnologia .cards { gap: 20px; }
+}
+
+@media only screen and (max-width: 900px) {
+  section#tecnologia .content img { display: none; }
+  section#tecnologia .cards {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  section#tecnologia .card-icon { width: 90px; height: 90px; }
+}
+
+@media only screen and (max-width: 420px) {
+  section#tecnologia .card-icon { width: 80px; height: 80px; }
+  section#tecnologia .card-title { font-size: 20px; }
+}

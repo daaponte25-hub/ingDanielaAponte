@@ -1,0 +1,106 @@
+/* Fonts y variables */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Libre+Franklin:ital,wght@1,500&display=swap");
+
+:root{
+  --hero-overlay: rgba(0,0,0,0.55);
+  --cta-bg: #ff1f5a; /* rosa */
+  --white: #ffffff;
+}
+
+/* reset mínimo local */
+.head, .head * { box-sizing: border-box; }
+
+.head {
+  background: url("../images/inicioAlokate.png") center/cover no-repeat;
+  position: relative;
+  min-height: 82vh;               
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;            
+  color: var(--white);
+  overflow: hidden;
+}
+
+.head::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-overlay);
+  z-index: 0;
+}
+
+.head .content{
+  position: relative;
+  z-index: 1;                      /* encima del overlay */
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.head .container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 880px;
+}
+
+.head h1{
+  margin: 0 0 18px 0;
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.2rem, 6.25vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -1px;
+  text-transform: none;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+
+.head p{
+  margin: 0 auto 28px auto;
+  font-family: "Libre Franklin", sans-serif;
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  max-width: 760px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.head .head-cta,
+.head .btn {
+  display: inline-block;
+  background: var(--cta-bg);
+  color: var(--white);
+  padding: 14px 34px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: transform .14s ease, box-shadow .14s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.head .head-cta:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.30);
+}
+
+@media (max-width: 900px) {
+  .head {
+    padding: 60px 16px;
+    min-height: 70vh;
+  }
+  .head h1 { line-height: 1.03; }
+  .head p { margin-bottom: 20px; }
+  .head .head-cta { padding: 12px 26px; }
+}
+
+@media (max-width: 480px){
+  .head { padding: 48px 12px; min-height: auto; }
+  .head h1 { font-size: clamp(1.8rem, 10vw, 2.6rem); }
+  .head p { font-size: .95rem; }
+  .head .head-cta { padding: 10px 18px; font-size: .95rem; }
+}
