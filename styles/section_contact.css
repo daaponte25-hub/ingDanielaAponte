@@ -1,6 +1,7 @@
 section#contact {
   padding: 80px 6%; 
   background: #F1EFFF;
+  overflow: hidden;
 }
 
 section#contact .content {
@@ -61,6 +62,7 @@ section#contact .social-links {
   margin-top: 25px;
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 section#contact .social-links a {
@@ -72,6 +74,7 @@ section#contact .social-links a {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
+  word-break: break-all; 
 }
 
 section#contact .social-links a:hover {
@@ -119,5 +122,15 @@ section#contact .contact-img.is-visible {
   section#contact .btn-contact {
     flex: none;
     width: 100%; 
+  }
+
+  section#contact .social-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  section#contact .social-links a {
+    font-size: 12px; 
   }
 }
