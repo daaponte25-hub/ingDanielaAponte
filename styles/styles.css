@@ -1,0 +1,22 @@
+@import url('global.css');
+@import url('header.css');
+@import 'header.css';
+@import 'hero.css';
+@import 'problemas.css';
+@import 'mision.css';
+@import 'servicios.css';
+@import 'autoridad.css';
+@import 'testimonios.css';
+@import 'contacto.css';
+@import 'footer.css';
+
+
+
+
+:root {
+    --bg-color: #EDF0F0;
+    --primary-dark: #0f003e;
+    --neon-green: #DDFF8C;
+    --fuchsia-accent: #FF00FF;
+    --electric-blue: #00BFFF;
+}

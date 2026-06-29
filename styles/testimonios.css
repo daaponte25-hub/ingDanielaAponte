@@ -1,0 +1,41 @@
+#testimonios {
+    padding: 60px 0;
+    background: #ffffff;
+    overflow: hidden; 
+}
+
+#testimonios h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-dark);
+}
+
+.logo-marquee {
+    width: 100%;
+    display: flex;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 80px; 
+    animation: scroll 20s linear infinite;
+}
+
+.marquee-track img {
+    height: 50px; 
+    width: auto;
+    filter: grayscale(1); 
+    transition: 0.3s;
+    opacity: 0.6;
+}
+
+.marquee-track img:hover {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+}

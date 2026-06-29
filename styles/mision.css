@@ -1,0 +1,32 @@
+#mision {
+    padding: 60px 24px; /* Menos alto, como pediste */
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.mision-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#mision h2 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+#mision p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+#mision .lema {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-style: italic;
+    border-bottom: 3px solid var(--neon-green);
+    padding-bottom: 2px;
+}

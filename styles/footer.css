@@ -1,91 +1,80 @@
-section#contato {
-  padding: 10px 0px;
-  background: #7159c1;
+footer {
+    background-color: var( --bg-color);
+    color: #ffffff;
+    padding: 60px 24px 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-section#contato .content .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
 }
 
-section#contato .content .container div {
-  display:flex;
-  padding-left: 20px;
+.footer-col h3 {
+    color: var(--electric-blue);
+    margin-bottom: 20px;
 }
 
-section#contato .content .container div div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #fff;
+.footer-col p, .footer-col ul {
+    color: #0f003e;
+    line-height: 1.6;
 }
 
-section#contato .content .container div div strong {
-  font-size: 24px;
+.footer-col ul {
+    list-style: none;
 }
 
-section#contato .content .container div div span {
-  font-size: 15px;
-  color: #D3CCEC
+.footer-col ul li a {
+    color: #0f003e;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-section#contato .content .container div div div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  height: 48px;
-  padding: 0 20px;
-  border-radius: 4px;
-  margin-top: 20px;
+.footer-col ul li a:hover {
+    color: var(--neon-green);
 }
 
-section#contato .content .container div div div input {
-  border: 0;
+.social-links a {
+    margin-right: 15px;
+    color: #0f003e;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-@media only screen and (max-width: 850px){
-  section#contato .content .container .img_lateral {
-    display: none;
-  }
-
-  section#contato .content .container {
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; 
     align-items: center;
-    justify-content: center;
-  }
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
 }
 
-@media only screen and (max-width: 500px){
-  section#contato .content .container div img {
-    padding-left: 0px;
-    display: none;
-  }
+.footer-legal {
+    display: flex;
+    gap: 20px; 
 }
 
-footer .content .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 0px;
-  color: #666666;
+.footer-legal a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-footer .content .container ul {
-  list-style: none;
-  display:flex;
+.footer-legal a:hover {
+    color: var(--neon-green);
 }
 
-footer .content .container ul li {
-  margin: 0 10px;
-}
-
-@media only screen and (max-width: 1000px){
-  footer .content .container {
-    justify-content: center;
-  }
-
-  footer .content .container ul {
-    display: none;
-  }
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }
