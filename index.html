@@ -24,6 +24,7 @@
             <ul>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#autoridad">Proceso</a></li>
+				<li><a href="#">Productos</a></li>
                 <li><a href="#contacto" class="btn-primary">Agendar consultoría</a></li>
             </ul>
         </nav>
@@ -32,43 +33,62 @@
 
     <main>
         <section id="hero" data-aos="fade-in">
-    <div class="hero-impact" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Transformamos tu negocio con desarrollo a medida y automatización inteligente.</h1>
-        <a href="#contacto" class="btn-cta">Agendar consultoría gratuita</a>
-        <p></p>
-        <p class="social-proof">+40 proyectos exitosos avalan nuestra experiencia</p>
+    <div class="hero-container">
+        <div class="hero-impact" data-aos="fade-right" data-aos-duration="1000">
+            <h1>Transformamos tu negocio con <span class="highlight">desarrollo a medida</span> y automatización inteligente.</h1>
+            
+            <p class="hero-subtitle">Creamos soluciones de software optimizadas para la eficiencia, escalabilidad y un mejor rendimiento de tu empresa/marca.</p>
+            
+            <div class="hero-actions">
+                <a href="#contacto" class="btn-cta primary">Agendar consultoría gratuita</a>
+                <a href="#servicios" class="btn-cta secondary">Ver soluciones ➔</a>
+            </div>
+            
+        </div>
     </div>
 
     <div class="hero-value-banner" data-aos="fade-up" data-aos-delay="300">
-        <p>Desde el <span>desarrollo de software</span> escalable e implementación hasta la <span>automatización con IA</span> y <span>marketing digital</span>. Optimizamos tus procesos, multiplicamos tus ventas, despegamos tu negocio en el mundo digital.</p>
+        <div class="banner-grid">
+            <div class="banner-item">
+                <p>Procesos Automatizados <strong>al 100%</strong></p>
+            </div>
+            <div class="banner-item">
+                <p>Entrega de Proyectos <strong>Más Rápida</strong></p>
+            </div>
+            <div class="banner-item">
+                <p>+40 proyectos exitosos<strong> avalan nuestra experiencia</strong></p>
+            </div>
+            <div class="banner-item">
+                <p>Calidad Superior &  <strong>Escalable</strong></p>
+            </div>
+        </div>
     </div>
 </section>
 
         <section id="problemas">
-            <div class="content">
-                <h2 data-aos="fade-up">¿Sientes que tus sistemas actuales frenan tu crecimiento?</h2>
-                <div class="pain-points">
+          <div class="content">
+              <h2 data-aos="fade-up">¿Sientes que tus sistemas actuales frenan tu crecimiento?</h2>
+              <div class="pain-points">
                   <article data-aos="fade-up" data-aos-delay="100">
-    <i><img src="images/procesoslentos.png" alt="Procesos lentos"></i>
-    <h3>Procesos lentos</h3>
-    <p>Eliminamos tareas manuales repetitivas.</p>
-    </article>
+                      <i><img src="images/procesoslentos.png" alt="Procesos lentos"></i>
+                      <h3>Procesos lentos</h3>
+                      <p>Eliminamos tareas manuales repetitivas.</p>
+                  </article>
 
-    <article data-aos="fade-up" data-aos-delay="200">
-        <i><img src="images/internet.png" alt="Falta de visibilidad"></i>
-        <h3>Falta de visibilidad</h3>
-        <p>Datos claros para decisiones estratégicas y posicionamiento como referente en tu nicho</p>
-    </article>
+                  <article data-aos="fade-up" data-aos-delay="200">
+                      <i><img src="images/internet.png" alt="Falta de visibilidad"></i>
+                      <h3>Falta de visibilidad</h3>
+                      <p>Datos claros para decisiones estratégicas y posicionamiento como referente en tu nicho en RRSS</p>
+                  </article>
 
-    <article data-aos="fade-up" data-aos-delay="300">
-        <i><img src="images/costos.png" alt="Costos operativos"></i>
-        <h3>Costos operativos</h3>
-        <p>Automatización que reduce gastos innecesarios.</p>
-    </article>
-                
-                </div>
-            </div>
-        </section>
+                  <article data-aos="fade-up" data-aos-delay="300">
+                      <i><img src="images/costos.png" alt="Costos operativos"></i>
+                      <h3>Costos operativos</h3>
+                      <p>Automatización que reduce gastos innecesarios.</p>
+                  </article>
+              </div>
+          </div>
+      </section>
 
         <section id="mision">
     <div class="content" data-aos="fade-up">
@@ -81,92 +101,130 @@
 </section>
 
         <section id="servicios">
-            <div class="content">
-                <h2 data-aos="fade-up">Nuestras Soluciones Integrales</h2>
-                <div class="scroll-container">
+    <div class="content">
+        <div class="servicios-header">
+            <h2 data-aos="fade-up">Nuestras Soluciones Integrales</h2>
+            <div class="carousel-controls" data-aos="fade-up" data-aos-delay="100">
+                <button class="control-btn prev" id="prevBtn" aria-label="Anterior servicio">❮</button>
+                <button class="control-btn next" id="nextBtn" aria-label="Siguiente servicio">❯</button>
+            </div>
+        </div>
+        
+        <div class="scroll-container" id="servicesSlider">
+            
+            <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/icon-software.svg" alt="Desarrollo Software">
+                <h3>Desarrollo Software</h3>
+                <p>Arquitectura, análisis, CRMs y Web Apps. Desarrollamos de forma profesional, java, laravel, mysql, postgree, oracle. INCLUIMOS MIGRACION DE DATOS.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/icon-branding.svg" alt="Branding y Redes">
+                <h3>Branding y Redes</h3>
+                <p>Estudios de marca, diseño profesional, estrategias de contenido y gestión de redes sociales.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/icon-ecommerce.svg" alt="Tiendas Online">
+                <h3>Ecommerce</h3>
+                <p>Tiendas 24/7 autogestionables, manejo de inventarios y estructuras optimizadas para ventas.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/icon-n8n.svg" alt="Automatización IA">
+                <h3>Automatización IA</h3>
+                <p>Conexión de APIs, flujos inteligentes en n8n y dashboards personalizados para control total.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/icon-seo.svg" alt="SEO y SEM">
+                <h3>SEO y SEM</h3>
+                <p>Posicionamiento orgánico (On-page), Google Analytics/Search Console y campañas de anuncios.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/icon-hosting.svg" alt="Hosting y VPS">
+                <h3>Hosting y Servidores</h3>
+                <p>Planes de hosting con soporte, gestión de migraciones, actualizaciones y servidores VPS.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/icon-meta.svg" alt="Meta Ads">
+                <h3>Meta Ads</h3>
+                <p>Campañas publicitarias escalables, desde paquetes económicos por publicación hasta gestión avanzada.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+            <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="images/icon-mini.svg" alt="Soluciones Rápidas">
+                <h3>Soluciones Rápidas</h3>
+                <p>Menús digitales, invitaciones, bio links, y corrección/optimización de sistemas ya existentes.</p>
+                <a href="#contacto" class="btn-service">Saber más</a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+        <section id="autoridad" data-aos="fade-in">
+    <div class="content">
+        <h2 data-aos="fade-up">Metodología de Trabajo</h2>
+        
+        <div class="methodology-grid">
+            
+            <figure class="methodology-image-wrapper" data-aos="fade-right">
+                <img src="images/fase-escalamiento.jpg" alt="Metodología de escalamiento y optimización para sistemas de software" loading="lazy" width="450" height="400">
+            </figure>
+
+            <div class="steps-container" data-aos="fade-left">
+                <div class="process-steps-grid">
                     
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/icon-software.svg" alt="Desarrollo Software">
-                        <h3>Desarrollo Software</h3>
-                        <p>Arquitectura, análisis, CRMs y Web Apps. Desarrollamos de forma profesional, java, laravel, mysql, postgree, oracle. INCLUIMOS MIGRACION DE DATOS.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <h3>Reunión 1 a 1:</h3>
+                        <p>Gratuita y personalizada para hablar de tu idea, negocio y requerimientos.</p>
                     </article>
 
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/icon-branding.svg" alt="Branding y Redes">
-                        <h3>Branding y Redes</h3>
-                        <p>Estudios de marca, diseño profesional, estrategias de contenido y gestión de redes sociales.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <h3>Análisis y Diseño:</h3>
+                        <p>Planificación operativa y análisis profesionales para plantear los pasos a seguir adaptados ti.</p>
                     </article>
 
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/icon-ecommerce.svg" alt="Tiendas Online">
-                        <h3>Ecommerce</h3>
-                        <p>Tiendas 24/7 autogestionables, manejo de inventarios y estructuras optimizadas para ventas.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <h3>Implementación:</h3>
+                        <p>Ejecución técnica transparente con entregables constantes.</p>
                     </article>
 
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/icon-n8n.svg" alt="Automatización IA">
-                        <h3>Automatización IA</h3>
-                        <p>Conexión de APIs, flujos inteligentes en n8n y dashboards personalizados para control total.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
+                    <article class="step-card">
+                        <span class="step-number">04</span>
+                        <h3>Capacitación:</h3>
+                        <p>Te hacemos parte del proceso, asegurando autonomía total.</p>
                     </article>
 
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <img src="images/icon-seo.svg" alt="SEO y SEM">
-                        <h3>SEO y SEM</h3>
-                        <p>Posicionamiento orgánico (On-page), Google Analytics/Search Console y campañas de anuncios.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
+                    <article class="step-card">
+                        <span class="step-number">05</span>
+                        <h3>Escalamiento:</h3>
+                        <p>Soporte continuo y optimización basada en datos.</p>
                     </article>
 
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <img src="images/icon-hosting.svg" alt="Hosting y VPS">
-                        <h3>Hosting y Servidores</h3>
-                        <p>Planes de hosting con soporte, gestión de migraciones, actualizaciones y servidores VPS.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
-                    </article>
-
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <img src="images/icon-meta.svg" alt="Meta Ads">
-                        <h3>Meta Ads</h3>
-                        <p>Campañas publicitarias escalables, desde paquetes económicos por publicación hasta gestión avanzada.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
-                    </article>
-
-                    <article class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <img src="images/icon-mini.svg" alt="Soluciones Rápidas">
-                        <h3>Soluciones Rápidas</h3>
-                        <p>Menús digitales, invitaciones, bio links, y corrección/optimización de sistemas ya existentes.</p>
-                        <a href="#contacto" class="btn-service">Saber más</a>
+                    <article class="step-card specialty-card">
+                        <p class="methodology-note">Entregamos toda la documentación técnica requerida para que tú tengas el control absoluto de tus sistemas.</p>
                     </article>
 
                 </div>
             </div>
-        </section>
 
-        <section id="autoridad">
-          <div class="content">
-              <h2 data-aos="fade-up">Metodología de Trabajo</h2>
-              
-              <div class="methodology-grid">
-                  <img src="images/fase-diagnostico.png" alt="Diagnóstico inicial" class="side-img" data-aos="fade-right">
-                  
-                  <div class="steps-container" data-aos="fade-up">
-                      <ol class="steps">
-                          <li><strong>Reunión 1 a 1:</strong> gratuita y personalizada para hablar de tu idea, negocio y requerimientos.</li>
-                          <li><strong>Análisis y Diseño:</strong> Planificación operativa y análisis profesionales para plantear los pasos a seguir adaptados ti</li>
-                          <li><strong>Implementación:</strong> Ejecución técnica transparente con entregables constantes.</li>
-                          <li><strong>Capacitación:</strong> Te hacemos parte del proceso, asegurando autonomía total.</li>
-                          <li><strong>Escalamiento:</strong> Soporte continuo y optimización basada en datos.</li>
-                      </ol>
-                      <p class="methodology-note">Entregamos toda la documentación técnica requerida para que tú tengas el control absoluto de tus sistemas.</p>
-                  </div>
-
-                  <img src="images/fase-escalamiento.jpg" alt="Escalamiento y soporte" class="side-img" data-aos="fade-left">
-              </div>
-          </div>
-      </section>
+        </div>
+    </div>
+</section>
 
         <section id="testimonios">
     <div class="content">

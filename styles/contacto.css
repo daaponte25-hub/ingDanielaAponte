@@ -2,6 +2,7 @@
     background-color: var(--primary-dark);
     color: #ffffff;
     padding: 80px 24px;
+    box-sizing: border-box;
 }
 
 .contact-form input, 
@@ -9,7 +10,9 @@
 .contact-form button {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
+    box-sizing: border-box;
 }
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,6 +20,8 @@
     max-width: 1100px;
     margin: 0 auto;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-form {
@@ -26,6 +31,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-form input, .contact-form textarea {
@@ -34,6 +41,8 @@
     border: none;
     background: rgba(255, 255, 255, 0.9);
     color: var(--primary-dark);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .btn-submit {
@@ -45,10 +54,17 @@
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .btn-submit:hover {
     background: #000;
+}
+
+.contact-methods {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contact-methods .method {
@@ -57,6 +73,7 @@
     color: #fff;
     text-decoration: none;
     font-size: 1.2rem;
+    word-break: break-word;
 }
 
 .contact-methods .method span {
@@ -65,10 +82,6 @@
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-}
-
-@media (max-width: 768px) {
-    .contact-grid { grid-template-columns: 1fr; }
 }
 
 .btn-whatsapp {
@@ -82,12 +95,29 @@
     border-radius: 8px;
     font-size: 0.9rem;
     transition: transform 0.2s;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .btn-whatsapp:hover {
     transform: scale(1.05);
 }
+
 .contact-form input::placeholder {
     font-family: 'Poppins', sans-serif;
     color: #636e72;
+}
+
+@media (max-width: 768px) {
+    #contacto {
+        padding: 60px 16px;
+    }
+    .contact-grid { 
+        grid-template-columns: 1fr; 
+        gap: 40px;
+    }
+    .contact-form {
+        padding: 30px 20px;
+    }
 }
