@@ -1,6 +1,6 @@
 :root {
     --primary-dark: #0f003e;
-    --neon-green: #00ff66; 
+    --neon-green: #DDFF8C; 
     --accent-blue: #0055ff; 
     --text-color: #333333;
 }
@@ -13,12 +13,11 @@
     flex-direction: column;
     justify-content: space-between; 
     background-color: var(--primary-dark);
-    
     background-image: linear-gradient(90deg, rgba(15, 0, 62, 0.9) 30%, rgba(15, 0, 62, 0.4) 100%), 
                       url('../images/fondo-login.jpg');
     background-size: cover;
     background-position: center;
-    padding: 80px 0 40px 0;
+    padding: 140px 0 40px 0;
     overflow: hidden;
 }
 
@@ -39,7 +38,6 @@
     align-items: flex-start;
 }
 
-/* --- Tipografías y Textos --- */
 #hero h1 {
     font-size: clamp(2rem, 5vw, 3.5rem); 
     color: #ffffff;
@@ -96,7 +94,6 @@
     transform: translateY(-3px);
 }
 
-/* Botón Secundario (Línea) */
 #hero .btn-cta.secondary {
     background: transparent;
     color: #ffffff;
@@ -122,7 +119,7 @@
 
 .banner-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas en desktop */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -156,33 +153,36 @@
     color: var(--primary-dark);
 }
 
-/* --- RESPONSIVE (Media Queries) --- */
-
 @media (max-width: 992px) {
+    #hero {
+        padding-top: 120px;
+    }
+
     .banner-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2x2 en tablets */
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
     .banner-item:nth-child(2) {
-        border-right: none; /* Limpia divisores intermedios en diseño 2x2 */
+        border-right: none;
     }
 }
 
 @media (max-width: 768px) {
     #hero { 
         min-height: auto; 
-        padding: 60px 0 30px 0;
+        padding: 110px 0 30px 0;
     }
     
     .hero-impact {
         text-align: center;
-        align-items: center; /* Vuelve al centro en móviles para mejor lectura */
+        align-items: center;
         margin: 0 auto;
     }
 
     .hero-actions {
         width: 100%;
-        flex-direction: column; /* Botones uno encima del otro en móvil */
+        flex-direction: column;
     }
 
     #hero .btn-cta {
