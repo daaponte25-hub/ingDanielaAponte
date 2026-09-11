@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="images/alokatecreativo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -152,76 +153,86 @@
 </section>
 
         <section id="servicios">
-    <div class="content">
-        <div class="servicios-header">
-            <h2 data-aos="fade-up">Nuestras Soluciones Integrales</h2>
-            <div class="carousel-controls" data-aos="fade-up" data-aos-delay="100">
-                <button class="control-btn prev" id="prevBtn" aria-label="Anterior servicio">❮</button>
-                <button class="control-btn next" id="nextBtn" aria-label="Siguiente servicio">❯</button>
+            <div class="content">
+                <div class="servicios-header">
+                    <h2 data-aos="fade-up">Nuestras Soluciones Integrales</h2>
+                    <div class="carousel-controls" data-aos="fade-up" data-aos-delay="100">
+                        <button class="control-btn prev" id="prevBtn" aria-label="Anterior servicio">❮</button>
+                        <button class="control-btn next" id="nextBtn" aria-label="Siguiente servicio">❯</button>
+                    </div>
+                </div>
+                
+                <div class="scroll-container" id="servicesSlider">
+                    
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-hashtag"></i></div>
+                        <h3>Branding y Redes</h3>
+                        <p>Estudios de marca, diseño profesional, estrategias de contenido y gestión de redes sociales.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <h3>Ecommerce</h3>
+                        <p>Tiendas 24/7 autogestionables, manejo de inventarios y estructuras optimizadas para ventas.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+                        <h3>Desarrollo Software</h3>
+                        <p>Arquitectura, análisis, CRMs, ERPs y Web Apps. Desarrollamos de forma profesional INCLUIMOS MIGRACION DE DATOS.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Análisis de Datos (LLMs)</h3>
+                        <p>Integramos inteligencias artificiales avanzadas como OpenAI y Claude para analizar volúmenes masivos de datos de clientes y centralizarlos para ti al instante.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon"><i class="fa-solid fa-robot"></i></div>
+                        <h3>Automatización IA</h3>
+                        <p>Automatizamos la integración de tus sistemas (CRM, email, whatsapp) con n8n y Python para que tus procesos fluyan al 100% de forma autónoma y dashboards personalizados para control total.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>SEO y SEM</h3>
+                        <p>Posicionamiento orgánico, posicionate en la IA de Google, Google Analytics/Search Console y campañas de anuncios.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+                        <h3>Hosting y Servidores</h3>
+                        <p>Planes de hosting con soporte, gestión de migraciones, actualizaciones y servidores VPS.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon"><i class="fa-brands fa-meta"></i></div>
+                        <h3>Meta Ads</h3>
+                        <p>Campañas publicitarias escalables, desde paquetes económicos por publicación hasta gestión avanzada.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Soluciones Rápidas</h3>
+                        <p>Menús digitales, invitaciones, bio links, y corrección/optimización de sistemas ya existentes.</p>
+                        <a href="#contacto" class="btn-service">Saber más <i class="fa-solid fa-arrow-right"></i></a>
+                    </article>
+
+                </div>
             </div>
-        </div>
-        
-        <div class="scroll-container" id="servicesSlider">
-            
-            <article class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/icon-software.svg" alt="Desarrollo Software">
-                <h3>Desarrollo Software</h3>
-                <p>Arquitectura, análisis, CRMs y Web Apps. Desarrollamos de forma profesional, java, laravel, mysql, postgree, oracle. INCLUIMOS MIGRACION DE DATOS.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
+        </section>
 
-            <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/icon-branding.svg" alt="Branding y Redes">
-                <h3>Branding y Redes</h3>
-                <p>Estudios de marca, diseño profesional, estrategias de contenido y gestión de redes sociales.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-            <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="images/icon-ecommerce.svg" alt="Tiendas Online">
-                <h3>Ecommerce</h3>
-                <p>Tiendas 24/7 autogestionables, manejo de inventarios y estructuras optimizadas para ventas.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-            <article class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/icon-n8n.svg" alt="Automatización IA">
-                <h3>Automatización IA</h3>
-                <p>Conexión de APIs, flujos inteligentes en n8n y dashboards personalizados para control total.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-            <article class="service-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="images/icon-seo.svg" alt="SEO y SEM">
-                <h3>SEO y SEM</h3>
-                <p>Posicionamiento orgánico (On-page), Google Analytics/Search Console y campañas de anuncios.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-            <article class="service-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="images/icon-hosting.svg" alt="Hosting y VPS">
-                <h3>Hosting y Servidores</h3>
-                <p>Planes de hosting con soporte, gestión de migraciones, actualizaciones y servidores VPS.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-            <article class="service-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="images/icon-meta.svg" alt="Meta Ads">
-                <h3>Meta Ads</h3>
-                <p>Campañas publicitarias escalables, desde paquetes económicos por publicación hasta gestión avanzada.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-            <article class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <img src="images/icon-mini.svg" alt="Soluciones Rápidas">
-                <h3>Soluciones Rápidas</h3>
-                <p>Menús digitales, invitaciones, bio links, y corrección/optimización de sistemas ya existentes.</p>
-                <a href="#contacto" class="btn-service">Saber más</a>
-            </article>
-
-        </div>
-    </div>
-</section>
 
         <section id="autoridad" data-aos="fade-in">
     <div class="content">

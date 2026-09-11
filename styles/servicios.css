@@ -1,20 +1,15 @@
+:root {
+    --primary-dark: #0f003e;
+    --accent-color: #6366f1;
+    --text-muted: #94a3b8;
+}
+
 #servicios {
-    background-image: url('../images/services-desarrollo-software.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    padding: 80px 0;
+    background-color: var(--primary-dark);
+    padding: 100px 0;
     overflow: hidden;
-    
     color: #ffffff;
 }
-
-#servicios h2 {
-    color: #ffffff; 
-}
-    
-
 
 .content {
     max-width: 1200px;
@@ -27,14 +22,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 #servicios h2 {
     text-align: left;
     margin-bottom: 0;
     font-size: 2.5rem;
-    color: var(--primary-dark);
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -44,9 +39,9 @@
 }
 
 .control-btn {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    color: var(--primary-dark);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
     width: 46px;
     height: 46px;
     border-radius: 50%;
@@ -55,25 +50,28 @@
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    user-select: none;
 }
 
 .control-btn:hover {
-    background: var(--primary-dark);
-    color: #ffffff;
-    border-color: var(--primary-dark);
-    transform: scale(1.05);
+    background: #ffffff;
+    color: var(--primary-dark);
+    border-color: #ffffff;
+    transform: scale(1.08);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
 }
 
 .scroll-container {
     display: flex;
     gap: 24px;
     overflow-x: auto;
-    padding: 20px 4px 40px 4px;
-    scroll-behavior: smooth; 
-    
-    scrollbar-width: none; 
+    padding: 25px 8px 45px 8px;
+    scrollbar-width: none;
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -83,88 +81,102 @@
 .service-card {
     min-width: 320px;
     max-width: 340px;
-    background: #ffffff;
-    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
     padding: 35px 30px;
-    border-radius: 16px;*/
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    text-align: left; 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-color);
 }
 
-.service-card img {
-    width: 48px; 
-    height: 48px;
+.service-icon {
+    font-size: 2rem;
+    color: #818cf8;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: rgba(99, 102, 241, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    color: #ffffff;
+    background: var(--accent-color);
 }
 
 .service-card h3 {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 1.4rem;
-    color: var(--primary-dark);
+    color: #ffffff;
     font-weight: 700;
 }
 
 .service-card p {
     font-size: 0.95rem;
-    line-height: 1.5;
-    color: #64748b; 
+    line-height: 1.6;
+    color: var(--text-muted);
     margin-bottom: 25px;
     flex-grow: 1;
 }
 
 .btn-service {
-    background: #f1f5f9;
-    color: var(--primary-dark);
-    padding: 8px 18px;
-    border-radius: 30px; 
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-service:hover {
-    background: var(--primary-dark);
-    color: #ffffff;
+    background: #ffffff;
+    color: var(--primary-dark);
+    border-color: #ffffff;
 }
 
 @media (max-width: 768px) {
     #servicios {
-        padding: 60px 0;
+        padding: 70px 0;
     }
     
     .servicios-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 20px;
     }
-    
     
     .scroll-container {
         gap: 16px;
-        padding-bottom: 20px;
+        padding-bottom: 25px;
     }
     
     .service-card {
-        min-width: 280px; 
-        padding: 25px 20px;
-    }
-    
-    
-    .carousel-controls {
-        display: none;
+        min-width: 280px;
+        padding: 28px 22px;
     }
 }
