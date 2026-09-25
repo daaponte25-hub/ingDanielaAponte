@@ -1,3 +1,12 @@
+:root {
+    --bg-color: #EDF0F0;
+    --primary-dark: #0f003e;
+    --neon-green: #DDFF8C;
+    --fuchsia-accent: #FF00FF;
+    --electric-blue: #00BFFF;
+}
+
+
 * {
   margin: 0;
   padding: 0;
