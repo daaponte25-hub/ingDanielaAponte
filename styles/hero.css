@@ -185,68 +185,61 @@
     transform: translateY(-3px);
 }
 
+/* --- Nuevo layout: ocupar ancho completo, 4 bloques sin separación y formas desiguales --- */
 .hero-value-banner {
-    max-width: 1140px;
-    width: calc(100% - 48px);
-    margin: 50px auto 0 auto;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0;
 }
 
 .banner-grid {
     display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 20px;
+    grid-template-columns: 55% 45%; /* columnas desiguales */
+    grid-template-rows: 55% 45%;    /* filas desiguales */
+    gap: 0; /* sin espacio entre los bloques */
+    width: 100%;
+    max-width: 100%;
 }
 
 .banner-card {
-    border-radius: 20px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 0; /* bordes cuadrados */
+    min-height: 180px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .highlight-card {
     background-color: var(--neon-green);
     color: var(--primary-dark);
-    min-height: 180px;
-}
-
-.highlight-card .stat-number {
-    font-size: clamp(2.5rem, 4vw, 3.2rem);
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
-.highlight-card .stat-title {
-    font-size: 1.05rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin: 12px 0 6px 0;
-    color: var(--primary-dark);
-}
-
-.highlight-card .stat-footer {
-    font-size: 0.8rem;
-    font-weight: 700;
-    opacity: 0.75;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .content-card {
     background-color: #ffffff;
     color: #111827;
-    min-height: 180px;
+}
+
+/* Tipografías dentro de cards */
+.highlight-card .stat-number {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.highlight-card .stat-title, .highlight-card .stat-footer {
+    color: var(--primary-dark);
 }
 
 .content-card h3 {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: 800;
     color: var(--primary-dark);
     line-height: 1.25;
     margin-bottom: 10px;
-    letter-spacing: -0.01em;
 }
 
 .content-card .card-description {
@@ -256,23 +249,48 @@
     margin: 0;
 }
 
+/* Acomodar las 4 tarjetas en una cuadrícula 2x2 sin separación (cada una llena su celda) */
+.banner-grid > .banner-card:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 2; }
+.banner-grid > .banner-card:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
+.banner-grid > .banner-card:nth-child(3) { grid-column: 1 / 2; grid-row: 2 / 3; }
+.banner-grid > .banner-card:nth-child(4) { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+/* Animaciones "bruscas" al aparecer: uno desde la derecha y otro desde abajo */
+.banner-card { opacity: 0; transform: translateZ(0); }
+
+@keyframes slideFromRightAbrupt {
+  from { transform: translateX(120%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideFromBottomAbrupt {
+  from { transform: translateY(120%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Usamos la clase que AOS añade (.aos-animate) para disparar las animaciones cuando el elemento entra en vista */
+.banner-grid > .banner-card.aos-animate:nth-child(1) {
+  animation: slideFromRightAbrupt 200ms steps(1,end) 0ms both;
+}
+.banner-grid > .banner-card.aos-animate:nth-child(2) {
+  animation: slideFromBottomAbrupt 200ms steps(1,end) 80ms both;
+}
+.banner-grid > .banner-card.aos-animate:nth-child(3) {
+  animation: slideFromRightAbrupt 200ms steps(1,end) 140ms both;
+}
+.banner-grid > .banner-card.aos-animate:nth-child(4) {
+  animation: slideFromBottomAbrupt 200ms steps(1,end) 200ms both;
+}
+
+/* Ajustes responsive: en pantallas pequeñas apilarlas sin separación y con alturas apropiadas */
 @media (max-width: 992px) {
     .banner-grid {
         grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
     }
-
-    .highlight-card {
-        min-height: 150px;
-    }
+    .banner-grid > .banner-card { padding: 22px; }
 }
 
 @media (max-width: 576px) {
-    .hero-value-banner {
-        width: calc(100% - 32px);
-    }
-
-    .banner-card {
-        padding: 20px;
-        border-radius: 16px;
-    }
+    .hero-value-banner { margin-top: 18px; }
+    .banner-card { padding: 16px; }
 }
