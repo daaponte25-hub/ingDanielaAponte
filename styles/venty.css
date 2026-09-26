@@ -1,0 +1,388 @@
+:root {
+    --color-bg: #fdfcf0;
+    --color-text: #1a1a1a;
+    --color-cyan: #12FFFF;
+    --color-cyan-dark: #0bb8b8;
+    --color-cyan-glow: rgba(18, 255, 255, 0.5);
+    --font-main: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.bg-stripes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(18, 255, 255, 0.08) 0px,
+        rgba(18, 255, 255, 0.08) 1px,
+        transparent 1px,
+        transparent 14px
+    );
+    mask-image: radial-gradient(circle at 30% 20%, black 0%, transparent 60%),
+                radial-gradient(circle at 80% 80%, black 0%, transparent 55%);
+    -webkit-mask-image: radial-gradient(circle at 30% 20%, black 0%, transparent 60%),
+                        radial-gradient(circle at 80% 80%, black 0%, transparent 55%);
+    mask-composite: add;
+    -webkit-mask-composite: source-over;
+}
+
+.glow-bg {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glow-1 {
+    width: 350px;
+    height: 350px;
+    background: var(--color-cyan);
+    top: -120px;
+    left: -120px;
+    opacity: 0.25;
+}
+
+.glow-2 {
+    width: 280px;
+    height: 280px;
+    background: var(--color-cyan);
+    bottom: -80px;
+    right: -80px;
+    opacity: 0.2;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+.header {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--color-cyan);
+    box-shadow: 0 0 25px var(--color-cyan-glow), inset 0 0 15px rgba(18, 255, 255, 0.3);
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.brand-title .icon {
+    font-size: 2rem;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    max-width: 600px;
+    margin-bottom: 8px;
+}
+
+.sub-tagline {
+    font-size: 1rem;
+    color: rgba(26, 26, 26, 0.7);
+    max-width: 600px;
+}
+
+.character-section {
+    margin: 20px 0 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.character-wrapper {
+    width: 180px;
+    height: 180px;
+    filter: drop-shadow(0 0 20px var(--color-cyan-glow));
+    animation: float 4s ease-in-out infinite;
+}
+
+.character-svg {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-cyan);
+    color: #000;
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 15px var(--color-cyan-glow);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-cyan-dark);
+    box-shadow: 0 0 25px var(--color-cyan-glow);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-text);
+    border-color: rgba(26, 26, 26, 0.2);
+}
+
+.btn-secondary:hover {
+    border-color: var(--color-cyan);
+    color: var(--color-cyan-dark);
+    box-shadow: 0 0 15px var(--color-cyan-glow);
+    transform: translateY(-3px);
+}
+
+.demo-section {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.demo-card {
+    background: rgba(18, 255, 255, 0.08);
+    border: 1px solid var(--color-cyan);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 0 20px rgba(18, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.demo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(18, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.demo-card:hover::before {
+    left: 100%;
+}
+
+.demo-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--color-text);
+}
+
+.btn-demo {
+    background: transparent;
+    color: var(--color-cyan-dark);
+    border: 2px solid var(--color-cyan);
+    box-shadow: 0 0 10px var(--color-cyan-glow);
+    padding: 12px 20px;
+    font-size: 0.95rem;
+}
+
+.btn-demo:hover {
+    background: var(--color-cyan);
+    color: #000;
+    box-shadow: 0 0 25px var(--color-cyan-glow);
+    transform: scale(1.05);
+}
+
+.highlight-section {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.highlight-box {
+    background: rgba(18, 255, 255, 0.05);
+    border-left: 4px solid var(--color-cyan);
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+}
+
+.highlight-text {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+.price {
+    font-family: var(--font-main);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--color-cyan-dark);
+    text-shadow: 0 0 10px var(--color-cyan-glow);
+    display: inline-block;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+.cta-final {
+    margin-bottom: 50px;
+}
+
+.cta-final h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.be-venty {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-cyan-dark);
+    text-shadow: 0 0 20px var(--color-cyan-glow);
+    letter-spacing: 2px;
+    margin: 10px 0;
+    animation: pulse 2s infinite;
+}
+
+.refran {
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(26, 26, 26, 0.7);
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.footer {
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(253, 252, 240, 0.9);
+    border-top: 1px solid rgba(18, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px;
+}
+
+.social-links a {
+    color: var(--color-text);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(26, 26, 26, 0.15);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: var(--color-cyan-dark);
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 20px var(--color-cyan-glow);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+    .brand-title { font-size: 2rem; }
+    .tagline { font-size: 1rem; }
+    .sub-tagline { font-size: 0.9rem; }
+    .be-venty { font-size: 2rem; }
+    .character-wrapper { width: 140px; height: 140px; }
+    .logo-container { width: 100px; height: 100px; }
+    .btn { font-size: 0.9rem; padding: 12px 20px; }
+    .price { font-size: 1.5rem; }
+    .social-links a { width: 45px; height: 45px; font-size: 1.5rem; }
+}
