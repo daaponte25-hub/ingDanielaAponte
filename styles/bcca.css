@@ -1,0 +1,748 @@
+/* ============================================
+   RESET Y ESTILOS GLOBALES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================
+   UTILIDADES Y CONTENEDORES
+   ============================================ */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #31420F;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    color: #5a6a5a;
+    font-weight: 300;
+}
+
+.bg-light {
+    background-color: #f6f8f2;
+}
+
+.highlight {
+    color: #d4b83a;
+    position: relative;
+    display: inline-block;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: none;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #31420F 0%, #4a6318 100%);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4a6318 0%, #31420F 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(49, 66, 15, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #31420F;
+    border: 2px solid #31420F;
+}
+
+.btn-secondary:hover {
+    background: #31420F;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(49, 66, 15, 0.25);
+}
+
+.btn-large {
+    padding: 18px 45px;
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   SECCIÓN HERO
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('images/fondo-login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 40, 10, 0.88) 0%, rgba(49, 66, 15, 0.82) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    text-align: center;
+    width: 100%;
+}
+
+.hero .highlight {
+    color: #d4b83a;
+    -webkit-text-fill-color: #d4b83a;
+    display: inline;
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    max-width: 700px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .btn {
+    align-self: center;
+}
+
+/* ============================================
+   TARJETAS DE DESAFÍOS
+   ============================================ */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.challenge-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-align: center;
+    border: 1px solid rgba(49, 66, 15, 0.06);
+}
+
+.challenge-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(49, 66, 15, 0.12);
+}
+
+.challenge-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #31420F, #6b8a2a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.challenge-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #31420F;
+}
+
+.challenge-card p {
+    color: #5a6a5a;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   SECCIÓN DE PRECIOS
+   ============================================ */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px 30px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    border: 1px solid rgba(49, 66, 15, 0.06);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(49, 66, 15, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid #31420F;
+    transform: scale(1.02);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.02) translateY(-10px);
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background: linear-gradient(135deg, #d4b83a, #b89c20);
+    color: #31420F;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(212, 184, 58, 0.4);
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eef2e8;
+}
+
+.pricing-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #31420F;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #31420F;
+    line-height: 1.2;
+}
+
+.price-detail {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #7a8a6a;
+}
+
+.pricing-features {
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #3a4a3a;
+}
+
+.pricing-features li i {
+    color: #31420F;
+    font-size: 1.1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.pricing-features li.gift {
+    background: #faf6e0;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border-left: 4px solid #d4b83a;
+}
+
+.pricing-features li.gift i {
+    color: #b89c20;
+}
+
+.pricing-footer {
+    text-align: center;
+}
+
+.maintenance {
+    font-size: 0.85rem;
+    color: #7a8a6a;
+    margin-bottom: 1rem;
+}
+
+.pricing-footer .btn {
+    width: 100%;
+}
+
+/* ============================================
+   PORTAFOLIO
+   ============================================ */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 3rem;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    aspect-ratio: 4 / 3;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(49, 66, 15, 0.2);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px 20px;
+    background: linear-gradient(to top, rgba(49, 66, 15, 0.95), transparent);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h4 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.portfolio-overlay span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.portfolio-cta {
+    text-align: center;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: #31420F;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+.footer-content a {
+    color: #d4b83a;
+    font-weight: 600;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   BOTÓN FLOTANTE WHATSAPP
+   ============================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+    color: #ffffff;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE (MOBILE-FIRST)
+   ============================================ */
+
+@media screen and (max-width: 992px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+    
+    .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7rem;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .price {
+        font-size: 2.2rem;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-large {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+    
+    .pricing-card {
+        padding: 30px 20px;
+    }
+    
+    .badge {
+        right: 20px;
+        font-size: 0.7rem;
+        padding: 5px 15px;
+    }
+}
+
+
+/* ============================================
+   TÍTULO DESTACADO (Tus Desafíos Actuales)
+   ============================================ */
+.highlight-title {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #31420F;
+    padding-bottom: 15px;
+    background: linear-gradient(135deg, #31420F 0%, #6b8a2a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+/* Centrar el título destacado cuando está en un contenedor con text-align:center */
+#desafios .container {
+    text-align: center;
+}
+
+.title-underline {
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #d4b83a, #31420F);
+    border-radius: 5px;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 4px 15px rgba(212, 184, 58, 0.4);
+}
+
+/* ============================================
+   SECCIÓN CTA (¿Quieres conversar con nosotros?)
+   ============================================ */
+.cta-section {
+    background: linear-gradient(135deg, #31420F 0%, #4a6318 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 184, 58, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    line-height: 1.7;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #25D366;
+    color: #ffffff;
+    padding: 16px 38px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-whatsapp i {
+    font-size: 1.4rem;
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+    color: #ffffff;
+}
+
+/* ============================================
+   RESPONSIVE PARA NUEVAS SECCIONES
+   ============================================ */
+@media screen and (max-width: 768px) {
+    .highlight-title {
+        font-size: 2.2rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .btn-whatsapp {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .highlight-title {
+        font-size: 1.8rem;
+    }
+    
+    .cta-title {
+        font-size: 1.7rem;
+    }
+    
+    .cta-section {
+        padding: 60px 0;
+    }
+}
