@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por una Venezuela Bilingüe | Porpuesta Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/alokatecreativo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #ffffff;
+      overflow-x: hidden;
+    }
+    @keyframes floatPulse {
+      0% { transform: translateY(0px) scale(1); box-shadow: 0 8px 20px rgba(114, 22, 45, 0.3); }
+      50% { transform: translateY(-5px) scale(1.02); box-shadow: 0 15px 30px rgba(114, 22, 45, 0.5); }
+      100% { transform: translateY(0px) scale(1); box-shadow: 0 8px 20px rgba(114, 22, 45, 0.3); }
+    }
+    .whatsapp-float {
+      animation: floatPulse 2.5s infinite ease-in-out;
+      transition: all 0.2s;
+    }
+    .whatsapp-float:hover {
+      animation: none;
+      transform: scale(1.1);
+      background-color: #5c1122;
+    }
+    .hero-bg {
+      background: linear-gradient(135deg, #4A0E1E 0%, #72162D 50%, #5C1122 100%);
+    }
+    .accent-gradient {
+      background: linear-gradient(90deg, #F9B23F 0%, #F68B1F 100%);
+    }
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.25);
+    }
+    .portafolio-card {
+      transition: all 0.3s ease;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.15);
+    }
+    .portafolio-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 30px 40px -12px rgba(0, 0, 0, 0.3);
+    }
+    .portafolio-card img {
+      transition: transform 0.5s ease;
+    }
+    .portafolio-card:hover img {
+      transform: scale(1.05);
+    }
+    .btn-primary {
+      background: #F9B23F;
+      transition: all 0.2s;
+      font-weight: 600;
+      color: #4A0E1E;
+    }
+    .btn-primary:hover {
+      background: #F68B1F;
+      transform: scale(1.02);
+      box-shadow: 0 12px 20px -8px rgba(249, 178, 63, 0.6);
+    }
+    .btn-outline-light {
+      border: 2px solid rgba(255,255,255,0.7);
+      transition: all 0.2s;
+    }
+    .btn-outline-light:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: #F9B23F;
+    }
+    .section-title {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #4A0E1E;
+    }
+    .section-title-light {
+      color: #ffffff;
+    }
+    .pain-icon {
+      color: #E53E3E;
+      background: #FFF5F5;
+    }
+    .solution-icon {
+      color: #72162D;
+      background: #FDF2F4;
+    }
+    .bg-soft-blue {
+      background-color: #FDF2F4;
+    }
+    .bg-soft-gray {
+      background-color: #F9FAFB;
+    }
+    .pricing-badge {
+      background: #F9B23F;
+      color: #4A0E1E;
+      font-weight: 700;
+      padding: 0.3rem 1rem;
+      border-radius: 9999px;
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 768px) {
+      .hero-bg h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .feature-img {
+      background-color: #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4A5568;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 1rem;
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-800">
+
+  <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('images/hero-bg.webp'); background-color: #4A0E1E;"></div>
+    <div class="container mx-auto px-6 py-20 md:py-28 relative z-10">
+      <div class="max-w-3xl">
+        <div class="inline-block mb-6 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+          <span class="text-white font-medium text-sm tracking-wide"><i class="fas fa-globe-americas mr-2 text-amber-400"></i>Lleva Por Una Venezuela Bilingüe al siguiente nivel</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
+          Impulsa tu academia digital con <span class="text-amber-400">precios accesibles y profesionalismo.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-blue-100 mb-10 max-w-2xl">
+          ¡Empieza aquí hoy! Transforma tu academia o programa de idiomas con herramientas digitales que realmente funcionan.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://wa.me/584142398630" target="_blank" class="btn-primary inline-flex items-center px-8 py-4 rounded-full text-lg shadow-lg">
+            <i class="fab fa-whatsapp mr-3 text-xl"></i> Contáctanos por WhatsApp
+          </a>
+          <a href="#pricing" class="inline-flex items-center px-8 py-4 rounded-full text-lg btn-outline-light text-white font-medium">
+            Ver planes <i class="fas fa-arrow-down ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" class="w-full h-auto">
+        <path fill="#ffffff" fill-opacity="1" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="text-amber-500 font-semibold tracking-wide uppercase text-sm">Dolores comunes & soluciones</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold section-title mt-3">¿Te suena familiar?</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-4 text-lg">Identificamos los obstáculos que frenan a las academias de idiomas y te damos la solución directa.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-10 lg:gap-16">
+        <div class="space-y-6">
+          <div class="flex items-start gap-5 p-6 bg-soft-gray rounded-2xl card-hover">
+            <div class="pain-icon p-3 rounded-full text-xl"><i class="fas fa-hourglass-half"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Dependencia de plataformas lentas</h3>
+              <p class="text-gray-600 mt-1">Tus alumnos pierden interés por herramientas que no cargan rápido ni son intuitivas.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 p-6 bg-soft-gray rounded-2xl card-hover">
+            <div class="pain-icon p-3 rounded-full text-xl"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Falta de control en las clases</h3>
+              <p class="text-gray-600 mt-1">No tienes visibilidad ni gestión sobre el contenido, asistencia o progreso de los estudiantes.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 p-6 bg-soft-gray rounded-2xl card-hover">
+            <div class="pain-icon p-3 rounded-full text-xl"><i class="fas fa-chart-line"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Baja visibilidad digital</h3>
+              <p class="text-gray-600 mt-1">Sin presencia online optimizada, pierdes alumnos potenciales cada día.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 p-6 bg-soft-gray rounded-2xl card-hover">
+            <div class="pain-icon p-3 rounded-full text-xl"><i class="fas fa-folder-open"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Desorganización con los materiales</h3>
+              <p class="text-gray-600 mt-1">Archivos dispersos, enlaces de Drive engorrosos y falta de estructura para escalar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="flex items-start gap-5 p-6 bg-rose-50 rounded-2xl card-hover border border-rose-100">
+            <div class="solution-icon p-3 rounded-full text-xl"><i class="fas fa-rocket"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Plataforma ágil y personalizada</h3>
+              <p class="text-gray-600 mt-1">Web y LMS optimizados, con carga rápida y diseño atractivo para tus alumnos.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 p-6 bg-rose-50 rounded-2xl card-hover border border-rose-100">
+            <div class="solution-icon p-3 rounded-full text-xl"><i class="fas fa-sliders-h"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Panel de gestión privado</h3>
+              <p class="text-gray-600 mt-1">Control total de profesores, estudiantes y contenido desde un backend intuitivo.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 p-6 bg-rose-50 rounded-2xl card-hover border border-rose-100">
+            <div class="solution-icon p-3 rounded-full text-xl"><i class="fas fa-search"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Indexación y SEO inicial</h3>
+              <p class="text-gray-600 mt-1">Aparece en Google y atrae estudiantes de forma orgánica desde el primer día.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-5 p-6 bg-rose-50 rounded-2xl card-hover border border-rose-100">
+            <div class="solution-icon p-3 rounded-full text-xl"><i class="fas fa-layer-group"></i></div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Estructura optimizada y escalable</h3>
+              <p class="text-gray-600 mt-1">Flujos claros para retención y ventas; repite clases grabadas sin enlaces externos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-20 bg-soft-blue">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="text-amber-500 font-semibold tracking-wide uppercase text-sm">Planes comerciales</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold section-title mt-3">Elige el impulso perfecto</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-4 text-lg">Dos opciones diseñadas para llevar tu academia al siguiente nivel.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-3xl p-8 shadow-xl card-hover border border-gray-100 flex flex-col">
+          <div class="flex justify-between items-start">
+            <h3 class="text-2xl font-extrabold text-gray-800">Plan Esencial</h3>
+            <span class="pricing-badge">Popular</span>
+          </div>
+          <div class="mt-6">
+            <span class="text-5xl font-extrabold text-gray-900">$200</span>
+            <span class="text-gray-500 ml-2">USD</span>
+          </div>
+          <p class="text-gray-500 mt-4">Ideal para comenzar tu presencia digital con todo lo necesario.</p>
+          <ul class="mt-8 space-y-4 flex-1">
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Página web completa</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Blog integrado</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Dominio propio</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Hosting de 10GB, acceso al CPANEL</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-gift text-amber-500 mt-1"></i><span><strong>¡Regalo!</strong> Indexación profesional en Google</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Diseño 100% personalizado</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Optimización SEO Profesional</span></li>
+            <li class="flex items-start gap-3"><i class="fas fa-check-circle text-green-500 mt-1"></i><span>Estudio de mercado y posicionamiento</span></li>
+          </ul>
+          <div class="mt-8 pt-6 border-t border-gray-200">
+            <p class="text-sm text-gray-600"><i class="fas fa-sync-alt mr-2 text-amber-600"></i>Mantenimiento: <strong>$20 USD/mes</strong> a partir del 2do año.</p>
+            <a href="https://wa.me/584142398630" target="_blank" class="mt-6 block w-full text-center btn-primary py-4 rounded-full text-lg font-semibold shadow-md">Solicitar plan</a>
+          </div>
+        </div>
+        <div class="bg-gradient-to-b from-gray-900 to-gray-800 rounded-3xl p-8 shadow-2xl card-hover border border-gray-700 relative overflow-hidden flex flex-col">
+          <div class="absolute top-0 right-0 bg-amber-400 text-gray-900 text-xs font-bold px-6 py-2 rounded-bl-2xl">Recomendado</div>
+          <h3 class="text-2xl font-extrabold text-white">Plan Academia Pro / LMS</h3>
+          <div class="mt-6">
+            <span class="text-5xl font-extrabold text-white">$600</span>
+            <span class="text-gray-300 ml-2">USD</span>
+            <p class="text-amber-300 mt-2 text-sm font-medium"><i class="fas fa-credit-card mr-1"></i>Pagadero en hasta 3 cómodas cuotas</p>
+          </div>
+          <p class="text-gray-300 mt-4">La solución completa para gestionar y escalar tu academia digital.</p>
+          <ul class="mt-8 space-y-4 flex-1">
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-check-circle text-amber-400 mt-1"></i><span>Todo lo del Plan Esencial</span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-check-circle text-amber-400 mt-1"></i><span>Hosting de 30GB</span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-check-circle text-amber-400 mt-1"></i><span><strong>Panel de gestión privado (Backend/Plataforma educativa)</strong></span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-user-cog text-amber-400 mt-1"></i><span>Paneles personalizados para profesores y estudiantes</span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-check-circle text-amber-400 mt-1"></i><span>Vista para todos los usuarios en teléfono, laptop, tablet</span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-video text-amber-400 mt-1"></i><span>Repite clases grabadas sin enlaces de Drive externos</span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-chart-pie text-amber-400 mt-1"></i><span>Estructura optimizada para retención y ventas</span></li>
+            <li class="flex items-start gap-3 text-gray-200"><i class="fas fa-expand-arrows-alt text-amber-400 mt-1"></i><span>Flujos claros para escalar digitalmente</span></li>
+          </ul>
+          <div class="mt-8 pt-6 border-t border-gray-700">
+            <p class="text-sm text-gray-400"><i class="fas fa-calendar-alt text-amber-400 mr-2"></i>30$ mensuales a partir del segundo año</p>
+            <a href="https://wa.me/584142398630" target="_blank" class="mt-6 block w-full text-center bg-amber-400 hover:bg-amber-300 text-gray-900 font-bold py-4 rounded-full text-lg transition shadow-lg">Quiero este plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="text-amber-500 font-semibold tracking-wide uppercase text-sm">Alokate Creativo</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold section-title mt-3">Proyectos que hablan por nosotros</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-4 text-lg">Explora algunos de nuestros trabajos y déjate inspirar.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <a href="https://consultoresjae.com/" target="_blank" class="portafolio-card block bg-white">
+          <div class="h-64 overflow-hidden flex items-center justify-center bg-gray-100">
+            <img src="images/portafolio-1.webp" alt="Consultores JAE" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'feature-img w-full h-full flex items-center justify-center\'>Imagen: images/portafolio-1.webp</div>'">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800">Consultores JAE</h3>
+            <p class="text-gray-500 text-sm mt-1">Sitio corporativo y blog integrado.</p>
+            <span class="inline-block mt-3 text-amber-500 font-medium text-sm">Ver proyecto <i class="fas fa-arrow-right ml-1"></i></span>
+          </div>
+        </a>
+        <a href="https://wacapitalglobal.com/" target="_blank" class="portafolio-card block bg-white">
+          <div class="h-64 overflow-hidden flex items-center justify-center bg-gray-100">
+            <img src="images/portafolio-2.webp" alt="WA Capital Global" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'feature-img w-full h-full flex items-center justify-center\'>Imagen: images/portafolio-2.webp</div>'">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800">WA Capital Global</h3>
+            <p class="text-gray-500 text-sm mt-1">Plataforma financiera con diseño moderno.</p>
+            <span class="inline-block mt-3 text-amber-500 font-medium text-sm">Ver proyecto <i class="fas fa-arrow-right ml-1"></i></span>
+          </div>
+        </a>
+        <a href="https://innovapagos.com/" target="_blank" class="portafolio-card block bg-white">
+          <div class="h-64 overflow-hidden flex items-center justify-center bg-gray-100">
+            <img src="images/portafolio-3.webp" alt="Innova Pagos" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'feature-img w-full h-full flex items-center justify-center\'>Imagen: images/portafolio-3.webp</div>'">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800">Innova Pagos</h3>
+            <p class="text-gray-500 text-sm mt-1">Soluciones de pago con enfoque UX.</p>
+            <span class="inline-block mt-3 text-amber-500 font-medium text-sm">Ver proyecto <i class="fas fa-arrow-right ml-1"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-8">
+        <a href="https://drive.google.com/file/d/1J9oRWjyWK6CY_R2DqeZBcZhz2P-jyR70/view?usp=sharing" target="_blank" class="inline-flex items-center px-10 py-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-full text-lg transition shadow-xl">
+          <i class="fas fa-folder-open mr-3"></i> Ver portafolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-r from-rose-50 to-amber-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold section-title mb-4">¿Quieres conversar con nosotros?</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-8">Agenda una reunión gratuita para hablar más sobre alguna de las dos propuestas. Estamos aquí para ayudarte a crecer.</p>
+      <a href="https://wa.me/584142398630" target="_blank" class="inline-flex items-center px-10 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full text-lg transition shadow-xl">
+        <i class="fab fa-whatsapp mr-3 text-2xl"></i> Contáctanos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-sm">© 2025 Alokate Creativo — Soluciones Digitales.</p>
+      <p class="text-xs mt-2">+30 proyectos exitosos</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/584142398630" target="_blank" 
+     class="whatsapp-float fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl z-50 flex items-center justify-center w-16 h-16 md:w-20 md:h-20 transition-all duration-300"
+     style="background-color: #25D366;">
+    <i class="fab fa-whatsapp text-3xl md:text-4xl"></i>
+  </a>
+
+  <script>
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === "#" || href === "") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
