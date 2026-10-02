@@ -237,6 +237,28 @@
       letter-spacing: 0;
     }
 
+    .service-block .market-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 6px 14px;
+      background: rgba(165, 240, 24, 0.12);
+      border: 1px solid rgba(165, 240, 24, 0.3);
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #3d5a00;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+      white-space: normal;
+    }
+
+    .service-block .market-note strong {
+      color: #1a1a1a;
+      font-weight: 700;
+    }
+
     .service-block .service-desc {
       display: grid;
       grid-template-columns: 1fr;
@@ -288,6 +310,16 @@
 
     .service-block.venti .service-price small {
       color: #006666;
+    }
+
+    .service-block.venti .market-note {
+      background: rgba(0, 0, 0, 0.1);
+      border-color: rgba(0, 0, 0, 0.15);
+      color: #003333;
+    }
+
+    .service-block.venti .market-note strong {
+      color: #000000;
     }
 
     .service-block.venti .service-desc span {
@@ -628,6 +660,11 @@
         font-size: 1.2rem;
       }
 
+      .service-block .market-note {
+        font-size: 0.72rem;
+        padding: 5px 10px;
+      }
+
       .btn-portfolio,
       .btn-alliance {
         padding: 14px 32px;
@@ -758,7 +795,7 @@
         <div class="service-desc">
           <span>La plataforma administrativa más completa de Venezuela</span>
           <span>Única que regala tu página web con e-commerce</span>
-          <span>Gestión de ventas, finanzas, multitienda, traslados, facturacion y Kardex</span>
+          <span>Gestión de ventas, finanzas, multitienda, traslados, facturación y Kardex</span>
           <span>Reportes en tiempo real</span>
           <span>Control de ganancias y pérdidas</span>
           <span>Productos más vendidos y alertas de stock</span>
@@ -774,6 +811,9 @@
           </div>
           <div class="service-price">
             500$ <small>opción de pago en 2 cuotas</small>
+            <span class="market-note">
+              <strong>Valor en el mercado:</strong> 1.000$ nacional · +2.500$ internacional. Puedes ganar lo que desees.
+            </span>
           </div>
         </div>
         <div class="service-desc">
