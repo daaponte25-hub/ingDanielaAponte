@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alokate Creativo · Alianzas Estratégicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="images/alokatecreativo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #fafafa;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(121, 39, 245, 0.035) 0%, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(165, 240, 24, 0.04) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(39, 245, 245, 0.02) 0%, transparent 55%),
+        linear-gradient(rgba(121, 39, 245, 0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(121, 39, 245, 0.018) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 80px 0 60px;
+      border-bottom: 1px solid rgba(121, 39, 245, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(165, 240, 24, 0.07) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(121, 39, 245, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 .highlight {
+      color: #7927F5;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero h1 .highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: #A5F018;
+      opacity: 0.45;
+      border-radius: 3px;
+      z-index: -1;
+    }
+
+    .hero .intro {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: #2d2d2d;
+      max-width: 720px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      font-weight: 400;
+    }
+
+    .hero .intro u {
+      text-decoration: underline;
+      text-decoration-color: #7927F5;
+      text-decoration-thickness: 2.5px;
+      text-underline-offset: 4px;
+      font-weight: 600;
+      color: #7927F5;
+    }
+
+    .hero .trust {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(121, 39, 245, 0.04);
+      border: 1px solid rgba(121, 39, 245, 0.1);
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #1a1a1a;
+      position: relative;
+      z-index: 1;
+      margin-top: 8px;
+    }
+
+    .hero .trust .dot {
+      width: 8px;
+      height: 8px;
+      background: #A5F018;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 0 3px rgba(165, 240, 24, 0.25);
+    }
+
+    .hero .trust strong {
+      color: #7927F5;
+      font-weight: 700;
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: #5a5a5a;
+      max-width: 640px;
+      margin-bottom: 40px;
+      font-weight: 400;
+    }
+
+    /* ===== SERVICES STACK ===== */
+    .services {
+      padding: 60px 0 20px;
+    }
+
+    .service-block {
+      background: #ffffff;
+      border: 1px solid rgba(121, 39, 245, 0.1);
+      border-radius: 24px;
+      padding: 40px 36px;
+      margin-bottom: 28px;
+      transition: all 0.3s ease;
+      position: relative;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+    }
+
+    .service-block:hover {
+      border-color: rgba(121, 39, 245, 0.25);
+      box-shadow: 0 16px 48px rgba(121, 39, 245, 0.07);
+      transform: translateY(-3px);
+    }
+
+    .service-block .service-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .service-block .service-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .service-block .service-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: 100px;
+      align-self: flex-start;
+      background: rgba(121, 39, 245, 0.08);
+      color: #7927F5;
+    }
+
+    .service-block .service-name {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: #1a1a1a;
+    }
+
+    .service-block .service-price {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #7927F5;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .service-block .service-price small {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #6b6b6b;
+      display: block;
+      letter-spacing: 0;
+    }
+
+    .service-block .service-desc {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px 32px;
+      margin-top: 4px;
+    }
+
+    @media (min-width: 640px) {
+      .service-block .service-desc {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .service-block .service-desc span {
+      position: relative;
+      padding-left: 20px;
+      font-size: 0.95rem;
+      color: #3d3d3d;
+      line-height: 1.65;
+    }
+
+    .service-block .service-desc span::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #7927F5;
+      font-weight: 700;
+    }
+
+    /* ===== VENTY BLOCK (cyan) ===== */
+    .service-block.venti {
+      background: #27F5F5;
+      border-color: #1ad4d4;
+      color: #003333;
+    }
+
+    .service-block.venti .service-badge {
+      background: rgba(0, 0, 0, 0.12);
+      color: #003333;
+    }
+
+    .service-block.venti .service-name {
+      color: #003333;
+    }
+
+    .service-block.venti .service-price {
+      color: #003333;
+    }
+
+    .service-block.venti .service-price small {
+      color: #006666;
+    }
+
+    .service-block.venti .service-desc span {
+      color: #004d4d;
+    }
+
+    .service-block.venti .service-desc span::before {
+      color: #003333;
+      font-weight: 900;
+    }
+
+    .service-block.venti:hover {
+      box-shadow: 0 16px 48px rgba(39, 245, 245, 0.35);
+      border-color: #0fc9c9;
+    }
+
+    /* ===== PORTFOLIO ===== */
+    .portfolio {
+      padding: 60px 0 60px;
+      border-top: 1px solid rgba(121, 39, 245, 0.06);
+    }
+
+    .portfolio-header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    @media (min-width: 768px) {
+      .portfolio-header {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    .portfolio-header .portfolio-title-group h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .portfolio-header .portfolio-title-group p {
+      font-size: 1rem;
+      color: #5a5a5a;
+      max-width: 520px;
+    }
+
+    .portfolio-header .experience-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      background: rgba(121, 39, 245, 0.05);
+      border: 1px solid rgba(121, 39, 245, 0.12);
+      padding: 12px 22px;
+      border-radius: 16px;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 768px) {
+      .portfolio-header .experience-badge {
+        align-items: flex-end;
+      }
+    }
+
+    .portfolio-header .experience-badge .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #7927F5;
+      letter-spacing: -0.01em;
+    }
+
+    .portfolio-header .experience-badge .years {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #5a5a5a;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 640px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .portfolio-item {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(121, 39, 245, 0.1);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: block;
+      background: #ffffff;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+      position: relative;
+      aspect-ratio: 4 / 3;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(121, 39, 245, 0.12);
+      border-color: rgba(121, 39, 245, 0.3);
+    }
+
+    .portfolio-item .portfolio-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+      background: linear-gradient(145deg, #faf8ff 0%, #ffffff 100%);
+      transition: background 0.3s ease;
+      position: relative;
+    }
+
+    .portfolio-item:hover .portfolio-inner {
+      background: linear-gradient(145deg, #f3eeff 0%, #ffffff 100%);
+    }
+
+    .portfolio-item .portfolio-inner .icon-circle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(121, 39, 245, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+      transition: background 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-inner .icon-circle {
+      background: rgba(121, 39, 245, 0.15);
+    }
+
+    .portfolio-item .portfolio-inner .label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .portfolio-item .portfolio-inner .url {
+      font-size: 0.78rem;
+      color: #7927F5;
+      font-weight: 500;
+      word-break: break-all;
+      max-width: 100%;
+      padding: 0 8px;
+    }
+
+    .portfolio-item .portfolio-inner .arrow {
+      margin-top: 12px;
+      font-size: 1.2rem;
+      color: #7927F5;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover .portfolio-inner .arrow {
+      transform: translateX(6px);
+    }
+
+    .portfolio-cta {
+      text-align: center;
+    }
+
+    .btn-portfolio {
+      display: inline-block;
+      background: #7927F5;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 16px 44px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 24px rgba(121, 39, 245, 0.25);
+      border: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .btn-portfolio:hover {
+      background: #6a1fd6;
+      box-shadow: 0 12px 32px rgba(121, 39, 245, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-portfolio:active {
+      transform: translateY(0);
+    }
+
+    /* ===== FINAL ALLIANCE SECTION ===== */
+    .alliance {
+      padding: 70px 0 80px;
+      background: rgba(252, 250, 255, 0.7);
+      border-top: 1px solid rgba(121, 39, 245, 0.06);
+      border-bottom: 1px solid rgba(121, 39, 245, 0.06);
+      backdrop-filter: blur(6px);
+    }
+
+    .alliance .global-line {
+      font-size: 0.95rem;
+      color: #7927F5;
+      font-weight: 500;
+      margin-bottom: 12px;
+      display: block;
+      letter-spacing: -0.01em;
+    }
+
+    .alliance h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: #1a1a1a;
+      max-width: 720px;
+    }
+
+    .alliance h2 .accent {
+      color: #7927F5;
+    }
+
+    .alliance .alliance-text {
+      font-size: 1.05rem;
+      color: #3d3d3d;
+      max-width: 680px;
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+
+    .alliance .alliance-sub {
+      font-size: 1.05rem;
+      color: #2d2d2d;
+      max-width: 680px;
+      margin-bottom: 32px;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .alliance .alliance-sub strong {
+      color: #7927F5;
+    }
+
+    .btn-alliance {
+      display: inline-block;
+      background: #A5F018;
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 16px 44px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      letter-spacing: -0.01em;
+      box-shadow: 0 8px 24px rgba(165, 240, 24, 0.35);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-alliance:hover {
+      background: #8fd60f;
+      box-shadow: 0 12px 32px rgba(165, 240, 24, 0.45);
+      transform: translateY(-2px);
+    }
+
+    .btn-alliance:active {
+      transform: translateY(0);
+    }
+
+    /* ===== WHATSAPP FLOATING BUTTON ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: none;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+    }
+
+    .whatsapp-float:active {
+      transform: scale(0.98);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+      fill: #ffffff;
+    }
+
+    /* ===== RESPONSIVE TWEAKS ===== */
+    @media (max-width: 480px) {
+      .hero {
+        padding: 56px 0 44px;
+      }
+
+      .hero .trust {
+        font-size: 0.82rem;
+        padding: 8px 16px;
+        flex-wrap: wrap;
+      }
+
+      .service-block {
+        padding: 28px 20px;
+      }
+
+      .service-block .service-price {
+        font-size: 1.2rem;
+      }
+
+      .btn-portfolio,
+      .btn-alliance {
+        padding: 14px 32px;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .portfolio-item {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .service-block {
+        padding: 48px 44px;
+      }
+    }
+
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <h1>
+        <span class="highlight">Alokate Creativo</span>,<br>
+        busca alianzas.
+      </h1>
+      <p class="intro">
+        Únete a nuestra red de agencias y <strong>cobra por encima de nuestros precios base</strong>.
+        Tú gestionas la relación con el cliente, <u>nosotros nos encargamos de todo</u>.
+      </p>
+      <div class="trust">
+        <span class="dot"></span>
+        <span><strong>+10 empresas</strong> a nivel nacional e internacional confían en nosotros</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICIOS (una sección por servicio, apiladas) ========== -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Planes y Soluciones</h2>
+      <p class="section-sub">
+        Herramientas diseñadas para escalar tus servicios. Tú pones el precio, nosotros la tecnología.
+      </p>
+
+      <!-- PLAN ESSENTIAL -->
+      <div class="service-block">
+        <div class="service-header">
+          <div>
+            <span class="service-badge">Web + Blog</span>
+            <h3 class="service-name">Plan Essential</h3>
+          </div>
+          <div class="service-price">
+            200$ <small>el primer año</small>
+            <small style="margin-top:4px; color:#7927F5; font-weight:700;">20$ a partir del segundo año</small>
+          </div>
+        </div>
+        <div class="service-desc">
+          <span>Página web con blog o catálogo incluido</span>
+          <span>Hosting de 10 GB + dominio .com</span>
+          <span>3 correos empresariales</span>
+          <span>Diseño totalmente único y optimizado a ventas</span>
+          <span>100% responsive + calificación A en Google</span>
+          <span>Estudio de mercado, competencia y SEO</span>
+          <span>Respaldo de base de datos</span>
+        </div>
+      </div>
+
+      <!-- E-COMMERCE COMPLEJO -->
+      <div class="service-block">
+        <div class="service-header">
+          <div>
+            <span class="service-badge">E-commerce</span>
+            <h3 class="service-name">E-commerce Complejo</h3>
+          </div>
+          <div class="service-price">
+            600$ <small>opción de pago en 3 cuotas</small>
+          </div>
+        </div>
+        <div class="service-desc">
+          <span>Plataforma con dashboard incluido</span>
+          <span>Incluye todo lo del Plan Essential</span>
+          <span>Gestión de envíos y verificación de pedidos</span>
+          <span>El comerciante solo envía el paquete a la dirección indicada</span>
+          <span>Panel administrativo para editar la página</span>
+          <span>Subir promociones, cargar productos y gestionar órdenes</span>
+        </div>
+      </div>
+
+      <!-- VENTY (cyan) -->
+      <div class="service-block venti">
+        <div class="service-header">
+          <div>
+            <span class="service-badge">Plataforma 12 módulos</span>
+            <h3 class="service-name">Venty</h3>
+          </div>
+          <div class="service-price">
+            A partir de 20$ <small>mensuales</small>
+          </div>
+        </div>
+        <div class="service-desc">
+          <span>La plataforma administrativa más completa de Venezuela</span>
+          <span>Única que regala tu página web con e-commerce</span>
+          <span>Gestión de ventas, finanzas, multitienda, traslados, facturacion y Kardex</span>
+          <span>Reportes en tiempo real</span>
+          <span>Control de ganancias y pérdidas</span>
+          <span>Productos más vendidos y alertas de stock</span>
+        </div>
+      </div>
+
+      <!-- PLAN IMPULSA (CRM) -->
+      <div class="service-block">
+        <div class="service-header">
+          <div>
+            <span class="service-badge">CRM + Copiloto</span>
+            <h3 class="service-name">Plan Impulsa (CRM)</h3>
+          </div>
+          <div class="service-price">
+            500$ <small>opción de pago en 2 cuotas</small>
+          </div>
+        </div>
+        <div class="service-desc">
+          <span>Centraliza mensajes de Instagram, TikTok, WhatsApp y Gmail</span>
+          <span>Copiloto con respuestas para el negocio en todas las RRSS</span>
+          <span>Bot con 25 preguntas y respuestas predeterminadas</span>
+          <span>Responde con imágenes, audios, propuestas y PDF generados</span>
+          <span>Reservas y agendamientos en calendario</span>
+          <span>Revisa disponibilidad de productos y agenda reuniones</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== PORTAFOLIO ========== -->
+  <section class="portfolio">
+    <div class="container">
+      <div class="portfolio-header">
+        <div class="portfolio-title-group">
+          <h2>Proyectos reales que impulsan negocios</h2>
+          <p>Haz clic en cada uno para explorar.</p>
+        </div>
+        <div class="experience-badge">
+          <span class="brand">Alokate Creativo</span>
+          <span class="years">+ 30 años en el mercado</span>
+        </div>
+      </div>
+
+      <div class="portfolio-grid">
+        <a href="https://consultoresjae.com/" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+          <div class="portfolio-inner">
+            <img src="images/portafolio-1.webp" alt="Consultores JAE" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:18px;">
+          </div>
+        </a>
+
+        <a href="https://wacapitalglobal.com/" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+          <div class="portfolio-inner">
+            <img src="images/portafolio-2.webp" alt="WA Capital Global" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:18px;">
+          </div>
+        </a>
+
+        <a href="https://innovapagos.com/" target="_blank" rel="noopener noreferrer" class="portfolio-item">
+          <div class="portfolio-inner">
+            <img src="images/portafolio-3.webp" alt="Innova Pagos" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:18px;">
+          </div>
+        </a>
+      </div>
+
+      <div class="portfolio-cta">
+        <a href="https://drive.google.com/file/d/1J9oRWjyWK6CY_R2DqeZBcZhz2P-jyR70/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-portfolio">
+          Cómo ver portafolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECCIÓN FINAL DE ALIANZA ========== -->
+  <section class="alliance">
+    <div class="container">
+      <span class="global-line">Trabajamos con personas de todas partes del mundo</span>
+      <h2>
+        Si quieres formar una <span class="accent">alianza con nosotros</span>, contáctanos.
+      </h2>
+      <p class="alliance-text">
+        Ponemos el código, la capacitación, sin detalles y sin errores. <strong>Nos encargamos de todo el proceso pesado.</strong>
+      </p>
+      <p class="alliance-sub">
+        Para cada servicio necesitamos cierta información de clientes. Si estás interesado en la alianza, <strong>agenda una reunión</strong> para enviarte el brief para tus clientes.
+      </p>
+      <a href="https://wa.me/584142398630" target="_blank" rel="noopener noreferrer" class="btn-alliance">
+        Agenda tu reunión
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+  <a href="https://wa.me/584142398630" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path d="M16.004 3C9.383 3 4 8.383 4 15.004c0 2.646.858 5.092 2.309 7.086L4.05 28.95l6.996-2.24a11.96 11.96 0 0 0 4.958 1.07c6.621 0 12.004-5.383 12.004-12.004C28.008 8.383 22.625 3 16.004 3zm0 21.82c-1.57 0-3.086-.425-4.396-1.215l-.315-.19-4.15 1.33 1.36-4.055-.21-.334a9.79 9.79 0 0 1-1.51-5.352c0-5.4 4.39-9.79 9.79-9.79 5.4 0 9.79 4.39 9.79 9.79 0 5.4-4.39 9.79-9.79 9.79zm5.37-7.33c-.295-.147-1.745-.86-2.015-.96-.27-.098-.468-.147-.665.147-.197.295-.762.96-.935 1.157-.172.197-.345.22-.64.074-.295-.147-1.245-.46-2.37-1.464-.877-.782-1.468-1.748-1.64-2.043-.172-.295-.018-.454.13-.6.13-.13.295-.344.443-.517.148-.172.197-.295.295-.492.098-.197.05-.37-.025-.517-.074-.147-.665-1.6-.91-2.19-.24-.576-.484-.497-.665-.507-.172-.008-.37-.01-.567-.01-.197 0-.517.074-.787.37-.27.295-1.033 1.01-1.033 2.46 0 1.45 1.057 2.852 1.204 3.05.147.196 2.08 3.178 5.04 4.455.704.304 1.254.486 1.683.622.708.225 1.352.193 1.86.117.567-.084 1.745-.713 1.99-1.402.246-.69.246-1.28.172-1.402-.074-.123-.27-.197-.566-.344z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
